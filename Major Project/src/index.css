@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 25% 98%;
+    --foreground: 120 5% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 5% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 5% 15%;
+
+    --primary: 120 50% 35%;
+    --primary-foreground: 120 10% 98%;
+
+    --secondary: 40 100% 60%;
+    --secondary-foreground: 40 10% 15%;
+
+    --muted: 120 10% 92%;
+    --muted-foreground: 120 5% 45%;
+
+    --accent: 25 100% 65%;
+    --accent-foreground: 25 10% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 10% 85%;
+    --input: 120 10% 85%;
+    --ring: 120 50% 35%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 120 15% 8%;
+    --foreground: 120 10% 98%;
+
+    --card: 120 15% 12%;
+    --card-foreground: 120 10% 98%;
+
+    --popover: 120 15% 12%;
+    --popover-foreground: 120 10% 98%;
+
+    --primary: 120 60% 50%;
+    --primary-foreground: 120 10% 8%;
+
+    --secondary: 40 85% 60%;
+    --secondary-foreground: 40 10% 8%;
+
+    --muted: 120 15% 18%;
+    --muted-foreground: 120 10% 75%;
+
+    --accent: 25 85% 65%;
+    --accent-foreground: 25 10% 8%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 15% 20%;
+    --input: 120 15% 20%;
+    --ring: 120 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans transition-colors duration-300;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-white/20 backdrop-blur-lg border border-white/30 shadow-xl;
+  }
+
+  .slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/60 rounded-full transition-colors;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+/* Image upload and preview styles */
+.image-upload-area {
+  @apply relative border-2 border-dashed rounded-xl p-6 transition-all duration-300 flex flex-col items-center justify-center text-center;
+}
+
+.image-upload-area.active {
+  @apply border-primary bg-primary/5;
+}
+
+.image-preview {
+  @apply rounded-xl overflow-hidden relative transition-all duration-300;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium;
+}
+
+.btn-accent {
+  @apply bg-accent text-accent-foreground hover:bg-accent/90 px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium;
+}
+
+.btn-outline {
+  @apply border border-primary text-primary hover:bg-primary/10 px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium;
+}
+
+/* Card styles */
+.feature-card {
+  @apply bg-card/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-border/50;
+}
+
+.glossy-card {
+  @apply rounded-2xl bg-gradient-to-br from-card/95 to-card/80 backdrop-blur-md shadow-lg border border-border/50 p-6 transition-all duration-300;
+}
+
+/* Leaf animation for loading states */
+.leaf-spin {
+  animation: leafSpin 2s ease-in-out infinite;
+}
+
+@keyframes leafSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* ✅ NEW: Text rotation animation for crop names */
+@keyframes rotateCropWords {
+  0%, 20% {
+    transform: translateY(0%);
+  }
+  25%, 45% {
+    transform: translateY(-100%);
+  }
+  50%, 70% {
+    transform: translateY(-200%);
+  }
+  75%, 100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-crop-rotate {
+  animation: rotateCropWords 6s ease-in-out infinite;
+  line-height: 1.2;
+}
