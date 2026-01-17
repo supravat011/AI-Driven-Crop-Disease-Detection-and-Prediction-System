@@ -158,8 +158,8 @@ graph TB
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/AI-Driven-Crop-Disease-Prediction-and-Management-System.git
-cd AI-Driven-Crop-Disease-Prediction-and-Management-System-main/Major\ Project
+git clone https://github.com/supravat011/AI-Driven-Crop-Disease-Detection-and-Prediction-System.git
+cd AI-Driven-Crop-Disease-Detection-and-Prediction-System/Major\ Project
 ```
 
 ### Step 2: Backend Setup (Flask)
@@ -560,7 +560,7 @@ We welcome contributions from the community! Here's how you can help:
 
 1. **Fork the Repository**
    ```bash
-   git fork https://github.com/yourusername/AI-Driven-Crop-Disease-Prediction-and-Management-System.git
+   git fork https://github.com/supravat011/AI-Driven-Crop-Disease-Detection-and-Prediction-System.git
    ```
 
 2. **Create a Feature Branch**
@@ -629,8 +629,8 @@ in the Software without restriction...
 For questions, support, or collaboration:
 
 - **Email**: support@cropdiseaseai.com
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/AI-Driven-Crop-Disease-Prediction-and-Management-System/issues)
-- **Documentation**: [Wiki](https://github.com/yourusername/AI-Driven-Crop-Disease-Prediction-and-Management-System/wiki)
+- **GitHub Issues**: [Create an issue](https://github.com/supravat011/AI-Driven-Crop-Disease-Detection-and-Prediction-System/issues)
+- **Documentation**: [Wiki](https://github.com/supravat011/AI-Driven-Crop-Disease-Detection-and-Prediction-System/wiki)
 - **Twitter**: [@CropDiseaseAI](https://twitter.com/cropdiseaseai)
 
 ---
